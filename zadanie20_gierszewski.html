@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20 - Gierszewski</title>
+</head>
+<body>
+    <p id="wynik"></p>
+</body>
+<script>
+    var xa_gie = parseFloat(prompt("Podaj xa"))
+    var ya_gie = parseFloat(prompt("Podaj ya"))
+    var xb_gie = parseFloat(prompt("Podaj xb"))
+    var yb_gie = parseFloat(prompt("Podaj yb"))
+    var xc_gie = parseFloat(prompt("Podaj xc"))
+    var yc_gie = parseFloat(prompt("Podaj yc"))
+    function AB_gie() {
+        return Math.sqrt(Math.pow(xb_gie-xa_gie, 2) + Math.pow(yb_gie-ya_gie,2));
+    }
+
+    function AC_gie() {
+        return Math.sqrt(Math.pow(xc_gie-xa_gie, 2)+ Math.pow(yc_gie-ya_gie,2));
+    }
+
+    function BC_gie() {
+        return Math.sqrt(Math.pow(xc_gie-xb_gie, 2) + Math.pow(yc_gie-yb_gie,2));
+    }
+    
+    document.getElementById("wynik").innerHTML = `AB=${AB_gie().toFixed(2)} BC=${BC_gie().toFixed(2)} AC=${AC_gie().toFixed(2)}`;
+</script>
+</html>

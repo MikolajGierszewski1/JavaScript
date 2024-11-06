@@ -1,0 +1,33 @@
+<textarea cols="100" rows="40">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 22 - Gierszewski</title>
+</head>
+<body>
+    <p>Podaj a = <input type="number" id="input1"></p>
+    <p>Podaj b = <input type="number" id="input2"></p>
+    <input type="submit" Value="Oblicz" Onclick="calculate()">
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <script>
+        function Pole_Gierszewski() {
+            var a_gie = parseFloat(document.getElementById('input1').value);
+            var b_gie = parseFloat(document.getElementById('input2').value);
+            return a_gie*b_gie;
+        }
+        function Obwod_Gierszewski() {
+            var a_gie = parseFloat(document.getElementById('input1').value);
+            var b_gie = parseFloat(document.getElementById('input2').value);
+            return a_gie*2+b_gie*2;
+        }
+        function calculate(){
+            document.getElementById("output1").innerHTML = `Pole = ${Pole_Gierszewski()}`;
+            document.getElementById("output2").innerHTML = `Obwod = ${Obwod_Gierszewski()}`;
+        }
+    </script>
+</body>
+</html>
+</textarea>

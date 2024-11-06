@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 24 - Gierszewski</title>
+    <style> *{font-family: Trebuchet, sans-serif; font-size: 32px}</style>
+</head>
+<body>
+<p id="inputs"></p>
+</body>
+<script>
+    var x1 = prompt("Podaj X1 = ");
+    var x2 = prompt("Podaj X2 = ");
+    var y1 = 3 * (x1 * (5/7));
+    var y2 = 2 * Math.cos(x1) + 3 * Math.sin(x1);
+    var y3 = Math.sqrt(Math.pow(x1, 5) + 2 * Math.pow(x2, 4) * Math.abs(x1 - x2), 3);
+    document.getElementById("inputs").innerHTML = `
+    Wczytane liczby: x1=${x1 }
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    x2=${x2} <br>
+    y1=${y1.toFixed(2)} <br>
+    y2=${y2.toFixed(2)} <br>
+    y3=${y3.toFixed(2)}`;
+</script>
+</html>

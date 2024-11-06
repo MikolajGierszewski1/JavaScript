@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 25 - Gierszewski</title>
+    <style>
+    * {
+        font-family: Trebuchet, sans-serif;
+        font-size: 32px;
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+<p id="output"></p>
+</body>
+<script>
+    const no = +prompt("Podaj No: ");
+    const t = +prompt("Podaj t: ");
+    const tPolowa = +prompt("Podaj T1/2: ");
+    const n2 = Math.LN2;
+    const eulers = Math.E;
+    const lambda = n2 / tPolowa;
+    const n = no * Math.pow(eulers, -lambda * t)
+
+    document.getElementById("output").innerHTML = `
+    No = ${no.toFixed(2)} [sztuk] <br>
+    t = ${t} [lat] <br>
+    T1/2 = ${tPolowa} [lat] <br>
+    Lambda = ${lambda.toFixed(7)} [1 / rok] <br>
+    N = ${n.toFixed(7)} [1 / rok] <br>`
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 26 - Gierszewski</title>
+</head>
+<body>
+<input type="submit" Value="Obwód" Onclick="obw_gied()">
+<input type="submit" Value="Pole" Onclick="pole_gied()">
+<p id="output1"></p>
+<p id="output2"></p>
+</body>
+<script>
+    const a = prompt("Podaj górną podstawę = ");
+    const b = prompt("Podaj dolną podstawę = ");
+    const h = prompt("Podaj wysokość podstawę = ");
+    const pole = ((a + b) / 2) * h;
+    const ramie = Math.sqrt(Math.pow((b - a) / 2, 2) + Math.pow(h, 2));
+    const obw = a + b + 2 * ramie;
+
+    function obw_gied(){
+        document.getElementById('output1').innerHTML = `<p>Obwód trapezu = ${obw}</p>`
+    }
+    function pole_gied(){
+        document.getElementById('output2').innerHTML = `<p>Pole trapezu = ${pole}</p>`
+    }
+</script>
+</html>

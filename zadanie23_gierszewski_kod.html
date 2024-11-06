@@ -1,0 +1,32 @@
+<textarea cols="100" rows="40">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 23 - Gierszewski</title>
+</head>
+<body>
+    <script>
+        function calculate() {
+            var d = parseFloat(document.getElementById('input1').value);
+            var x = parseFloat(document.getElementById('input2').value);
+            var drabina = Math.sqrt(Math.pow(d ,2) + Math.pow(x ,2));
+            var alfa = Math.atan(d/x) * (180/Math.PI);
+            document.getElementById("drabina").innerHTML = drabina.toFixed(2);
+            document.getElementById("alfa").innerHTML = alfa.toFixed(2);
+        }
+    </script>
+    <h4>Obliczanie odległości drabiny i kąta</h4>
+    <p>
+        Podaj d = <input type="number" id="input1">
+        Podaj x = <input type="number" id="input2">
+    </p>
+    <input type="submit" Value="Oblicz" Onclick="calculate()"> <br>
+    <p>
+        Drabina = <textarea rows="1" id="drabina"></textarea>
+        Alfa = <textarea rows="1" id="alfa"></textarea>
+    </p>
+</body>
+</html>
+</textarea>

@@ -1,0 +1,23 @@
+<textarea cols="100" rows="19">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 27 - Mikołaj Gierszewski</title>
+</head>
+<body>
+    <script>
+        let odl_gie = parseFloat(prompt('Podaj odległość: '));
+        let kat_gie = parseFloat(prompt('Podaj kąt: '));
+        let kat = 90-kat_gie;
+        let wysokosc = Math.sqrt(Math.pow(odl_gie/Math.cos(kat_gie * (Math.PI / 180)) ,2) - Math.pow(odl_gie, 2));
+        
+        function calculate() {
+            document.write(`Kąt = ${kat} <br> Wysokość = ${wysokosc}`);
+        }
+    </script>
+    <input type="submit" value="Oblicz" onclick="calculate()">
+</body>
+</html>
+</textarea>
