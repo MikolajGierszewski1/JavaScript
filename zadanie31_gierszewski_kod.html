@@ -1,0 +1,50 @@
+<textarea cols="100" rows="50">
+<html>
+ <head>
+ <script type="text/javascript">
+    var czlowiek = {
+        nazwisko: 'Gierszewski',
+        imie: 'Mikołaj',
+        zawod: 'Programista',
+        pokaz: function (){
+            document.write(this.nazwisko + ' ' + this.imie)
+        }
+    }
+    var komputer = {
+        marka: 'Lenovo',
+        gpu: 'RTX 3060',
+        cpu: 'amd ryzen 5 5600',
+        komputer_wyswietl_gierszewski: function() {
+            document.write(`
+            <br>
+            Marka: ${this.marka} <br>
+            GPU: ${this.gpu} <br>
+            CPU: ${this.cpu} <br>
+            Kolor obudowy: ${this.obudowa} <br>
+            metoda: komputer_wyswietl_gierszewski, wypisz <br>`)
+        }
+    }
+    czlowiek.pokaz();
+    czlowiek.wiek=16;
+    czlowiek.wypisz=function() {alert('Wiek: ' + this.wiek + 'lat')}
+    czlowiek.wypisz();
+
+    komputer.obudowa = 'Czarna';
+    komputer.wypisz = function(){alert(`Kolor obudowy komputea: ${this.obudowa}`)};
+    komputer.wypisz();
+    komputer.komputer_wyswietl_gierszewski();
+    </script>
+ </head>
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to człowiek<br>
+    Pola:<br>
+    Nazwisko<br>
+    imie<br>
+    zawod<br>
+    marka
+    metoda: pokaz<br>
+</body>
+</html>
+</textarea>
